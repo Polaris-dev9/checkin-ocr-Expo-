@@ -165,4 +165,3 @@ eas update --branch production --message "Initial release"
 - La integración con Mindee se realiza directamente desde el cliente por claridad en la prueba; en un entorno real se recomienda un backend proxy para proteger la API Key.
 - La validación de fechas y campos se ha mantenido simple (formato ISO básico) para no sobrecargar la prueba.
 - i18n reducido: textos principales en español con un pequeño helper `t()` para facilitar una futura extensión a otros idiomas.
-- 
