@@ -1,5 +1,12 @@
 # Check-in OCR (React Native + Expo)
 
+## Demo pública
+
+- Web: https://frolicking-paletas-28a0ba.netlify.app/
+- EAS Dashboard: https://expo.dev/accounts/polaris525/projects/checkin-ocr
+
+---
+
 Mini-flujo de check-in online que permite:
 
 - Escanear la parte delantera y trasera de un documento de identidad.
@@ -128,15 +135,21 @@ Para acceder:
 2. Abrir Expo Go y buscar el proyecto: `@polaris525/checkin-ocr`
 3. O usar el desarrollo local: `npx expo start` y escanear el QR code.
 
-### Web Build (Alternativa)
+### Web Build (Demo pública)
 
-Para una demo web más accesible, puedes exportar:
+La aplicación web está disponible en:
+
+Demo Web: https://frolicking-paletas-28a0ba.netlify.app/
+
+Esta versión web permite probar el flujo completo en cualquier navegador. Nota: la funcionalidad de cámara puede estar limitada en algunos navegadores, pero el resto del flujo (formularios, validación, navegación) funciona completamente.
+
+Para regenerar el build web:
 
 ```bash
-npx expo export:web
+npx expo export --platform web
 ```
 
-Esto genera una carpeta `web-build` que se puede subir a cualquier hosting estático (Netlify, Vercel, GitHub Pages, etc.).
+Esto genera una carpeta `dist` que se puede subir a cualquier hosting estático (Netlify, Vercel, GitHub Pages, etc.).
 
 ## Publicación
 
@@ -152,3 +165,4 @@ eas update --branch production --message "Initial release"
 - La integración con Mindee se realiza directamente desde el cliente por claridad en la prueba; en un entorno real se recomienda un backend proxy para proteger la API Key.
 - La validación de fechas y campos se ha mantenido simple (formato ISO básico) para no sobrecargar la prueba.
 - i18n reducido: textos principales en español con un pequeño helper `t()` para facilitar una futura extensión a otros idiomas.
+- 
